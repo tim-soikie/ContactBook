@@ -12,7 +12,6 @@ function getSingleContact(userID, contactID, db=database){
         .where("user_id", userID)
         .where("id", contactID)
         .select()
-        .first()
 }
 
 function addContact(userID, contact, db=database){
@@ -31,7 +30,7 @@ function addContact(userID, contact, db=database){
         .insert(newContact)
 }
 
-function removeContact(userID, db=database){
+function removeContact(userID, contactID, db=database){
     return db('contacts')
         .where("user_id", userID)
         .where("id", contactID)
