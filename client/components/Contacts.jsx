@@ -6,6 +6,7 @@ import Contact from "./Contact"
 import { getContacts } from "../actions/contacts"
 
 function Contacts ({dispatch, contacts}) {
+    
     useEffect(() => {
         dispatch(getContacts())
     }, [])

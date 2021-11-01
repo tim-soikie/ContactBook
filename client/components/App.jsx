@@ -11,9 +11,9 @@ function App () {
       <BrowserRouter>
        <Route path="/" component={Navigator}/>
        <div className="mainContainer">
-         <Route exact path="/dashboard" component={Dashboard}/>
-         <Route exact path="/contacts" component={Contacts}/>
-         <Route exact path="/reminders" component={Reminders}/>
+         <Route path="/dashboard" component={Dashboard}/>
+         <Route path="/contacts" component={Contacts}/>
+         <Route path="/reminders" component={Reminders}/>
        </div>
       </BrowserRouter>
     </>
