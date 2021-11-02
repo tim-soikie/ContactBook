@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from "react-redux"
 import {BrowserRouter, Route} from 'react-router-dom'
 import Dashboard from './Dashboard'
 import Contacts from './Contacts'
@@ -20,4 +21,4 @@ function App () {
   )
 }
 
-export default App
+export default connect()(App);

@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 
-import contactReducer from './contacts'
+import contacts from './contacts'
 
 export default combineReducers({
-    contactReducer
+    contacts
 })
