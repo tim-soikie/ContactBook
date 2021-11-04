@@ -1,11 +1,24 @@
 import React from 'react'
+import { connect } from "react-redux"
+import {BrowserRouter, Route} from 'react-router-dom'
+import Dashboard from './Dashboard'
+import Contacts from './Contacts'
+import Reminders from './Reminders'
+import Navigator from './Navigator'
 
-const App = () => {
+function App () {
   return (
     <>
-      <h1>Contact Book</h1>
+      <BrowserRouter>
+       <Route path="/" component={Navigator}/>
+       <div className="mainContainer">
+         <Route path="/dashboard" component={Dashboard}/>
+         <Route path="/contacts" component={Contacts}/>
+         <Route path="/reminders" component={Reminders}/>
+       </div>
+      </BrowserRouter>
     </>
   )
 }
 
-export default App
+export default connect()(App);
